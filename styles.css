@@ -72,6 +72,10 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /*  --  GLOBAL & COMPONENTS  --  */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #041737;
     color: #BA4A49;
@@ -422,7 +426,6 @@ nav {
     width: 22.14vw;
     height: 24.29vw;
     padding: 2.5vw 2.14vw;
-    /*background-color: #1E2142;*/
     background: linear-gradient(#1E2142, #212344);
     border-radius: 0.71vw;
     display: flex;
