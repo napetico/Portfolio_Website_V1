@@ -9,6 +9,7 @@
     <title>Napoleon Bazan - Rookie Full Stack Developer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="media\napetico_logo.svg">
+    <script src="main.js" defer></script>
 </head>
 
 <!-- BODY CODE -->
@@ -33,16 +34,15 @@
                 </ul>
             </nav>
         </section>
-    </header>
 
         <!--  This is the hero section code  -->
         <section class="section hero" id="hero">
             <span class="section-tag caps">H3LL0, M7 N4M3 1S...</span>
             <h1 class="h1 orange">Napoleón Bazán.</h1>
             <h1>And I'm learning to code.</h1>
-            <p class="hero-p">I'm a rookie developer halfway into the <span class="cursive">Full Stack Software Engineer</span> path at <a class="p-link" href="https://www.codecademy.com/profiles/napetico" target="_blank">Codecademy</a>. I want to mix my new programming skills with my brand & business knowledge I built at <a class="p-link" href="http://www.supervillanos.co" target="_blank">Supervillanos</a> and create with that exceptional digital solutions and experiences.</p>
+            <p class="hero-p">I'm a rookie developer halfway into the <span class="cursive">Full Stack Software Engineer</span> path at <a class="p-link" href="https://www.codecademy.com/profiles/napetico" target="_blank">Codecademy</a>. I want to use my new programming skills, mixed with the brand & business knowledge I built at <a class="p-link" href="http://www.supervillanos.co" target="_blank">Supervillanos</a>, to create exceptional digital solutions and experiences.</p>
             <a href="#portfolio">
-                <button>.explore<span class="orange">(<span class="cursive">myProjects</span>)</span></button> 
+                <button class="button">.explore<span class="orange">(<span class="cursive">myProjects</span>)</span></button> 
             </a>
         </section>
 
@@ -57,6 +57,24 @@
             </ul>
             <div class="media-panel-line"></div>
         </nav>
+
+        <!--  This is the mobile navigation code  -->
+        <nav class="mobile-navigation">
+            <button class="hamburger">
+                <div class="bar"></div>
+            </button>
+        </nav>
+        <ul class="mobile-nav-box">
+                <li class="mobile-nav-link">
+                    <a class="function-link mobile" href="#about">.about<span class="orange">(<span class="cursive">me</span>)</span></a>
+                </li>
+                <li class="mobile-nav-link">
+                    <a class="function-link mobile" href="#portfolio">.work<span class="orange">(<span class="cursive">done</span>)</span></a>
+                </li>
+                <li class="mobile-nav-link">
+                    <a class="function-link mobile" href="#footer">.contact<span class="orange">(<span class="cursive">me</span>)</span></a>
+                </li>
+            </ul>
     </header>
 
     <!--  Main Code  -->
@@ -243,10 +261,16 @@
             <span class="section-tag">.contact<span class="orange">(<span class="cursive">me</span>)</span></span>
             <h2>Find me <span class="orange">here</span>.</h2>
             <p>I'm always up for a great conversation. If you have an advice, a story, comments, questions, collab projects, or just want to say hi, please get in touch. I'll be happy to share a nice talk.</p>
-            <button>.say<span class="orange">(<span class="cursive">hello</span>)</span></button>
+            <button class="button">.say<span class="orange">(<span class="cursive">hello</span>)</span></button>
             <div class="foot-nav">
                 <img src="media\napetico_logo.svg" alt="Napoleon Bazan Logo" class="napo-logo">
-                <span class="footer-info">@napetico  |  <a class="foot-link" href="mailto:enabaro@gmail.com">enabaro@gmail.com</a>  |  <a class="foot-link" href="https://www.supervillanos.co" target="_blank">www.supervillanos.co</a></span>
+                <div class="footer-info">
+                    <span>@napetico</span>
+                    <span class="foot-dash">|</span>
+                    <a class="foot-link" href="mailto:enabaro@gmail.com">enabaro@gmail.com</a>
+                    <span class="foot-dash">|</span>
+                    <a class="foot-link" href="https://www.supervillanos.co" target="_blank">www.supervillanos.co</a>
+                </div>
                 <a class="function-link" href="#navigation">.backTo<span class="orange">(<span class="cursive">Top</span>)</span></a>   
             </div>
         </section>

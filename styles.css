@@ -111,7 +111,7 @@ h3 {
     margin-bottom: 0.71vw;
 }
 
-button {
+.button {
     font-family: 'Exo', sans-serif;
     font-size: 1.29vw;
     font-weight: 300;
@@ -128,7 +128,7 @@ button {
     transition: background-color 0.3s;
 }
 
-button:hover {
+.button:hover {
     background-color: #ffab2c09;
     text-shadow: 0vw 0vw 0.3vw #ffab2c8a;
     transform: translateY(-0.15vw);
@@ -203,7 +203,7 @@ button:hover {
         margin-bottom: 0.92vw;
     }
 
-    button {
+    .button {
         font-size: 1.68vw;
         margin-top: 4.17vw;
         padding: 1.48vw 2.98vw;
@@ -211,7 +211,7 @@ button:hover {
         border-radius: 0.7vw;
     }
     
-    button:hover {
+    .button:hover {
         text-shadow: 0vw 0vw 0.39vw #ffab2c8a;
         transform: translateY(-0.2vw);
     }
@@ -233,11 +233,11 @@ button:hover {
 
 @media only screen and (max-width: 576px) {
     body {
-        font-size: 3.69vw;
+        font-size: 3.86vw;
     }
 
     section {
-        padding: 11vw 4vw;
+        padding: 12vw 6vw;
     }
 
     h1 {
@@ -251,11 +251,12 @@ button:hover {
     }
     
     h3 {
-        font-size: 4.08vw;
-        margin-bottom: 2.02vw;
+        font-size: 4.69vw;
+        margin-bottom: 2.22vw;
+        width: 90%;
     }
 
-    button {
+    .button {
         font-size: 3.70vw;
         margin-top: 9.17vw;
         padding: 3.26vw 6.57vw;
@@ -263,7 +264,7 @@ button:hover {
         border-radius: 1.54vw;
     }
     
-    button:hover {
+    .button:hover {
         text-shadow: 0vw 0vw 0.86vw #ffab2c8a;
         transform: translateY(-0.44vw);
     }
@@ -321,6 +322,14 @@ nav {
     margin-left: 3.93vw;
 }
 
+.mobile-navigation {
+    display: none;
+}
+
+.mobile-nav-box {
+        display: none;
+    }
+
 @media only screen and (max-width: 992px) {
     .navbar-container {
         padding: 0 5vw 0 4.29vw;
@@ -347,11 +356,11 @@ nav {
 
 @media only screen and (max-width: 576px) {
     .navbar-container {
-        padding: 0 4vw;
+        padding: 0 6vw;
     }
 
     nav {
-        padding-top: 5vw;
+        padding-top: 6vw;
     }
 
     .napo-logo {
@@ -365,11 +374,88 @@ nav {
     }
 
     .nav-links-box {
-        
+        display: none;
     }
     
     .nav-link {
-        margin-left: 11.22vw;
+        margin-left: 2vw;
+    }
+
+    .hamburger {
+        position: relative;
+        display: block;
+        width: 7vw;
+        cursor: pointer;
+        appearance: none;
+        background: none;
+        outline: none;
+        border: none;
+
+        font-size: 0vw;
+        margin-top: 0vw;
+        padding: 0vw;
+        border: none;
+        border-radius: 0vw;
+    }
+
+    .hamburger .bar, .hamburger::after, .hamburger::before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 0.7vw;
+        background-color: #E95D39;
+        margin: 1.1vw 0vw;
+        transition: 0.4s;
+        border-radius: 1vw;
+    }
+
+    .hamburger.is-active::before {
+        transform: rotate(45deg) translate(1.1vw, 1.45vw);
+    }
+
+    .hamburger.is-active::after {
+        transform: rotate(-45deg) translate(1.1vw, -1.45vw);
+    }
+
+    .hamburger.is-active .bar {
+        opacity: 0;
+    }
+
+    .mobile-navigation {
+        display: block;
+        position: fixed;
+        padding: 0;
+        width: auto;
+        top: 8.8vw;
+        right: 6vw;
+        z-index: 10;
+    }
+
+    .mobile-nav-box {
+        display: block;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        right: 100%;
+        padding: 6vw;
+        opacity: 40;
+        flex-direction: column;
+        list-style: none;
+        background-color: #04132E;
+        z-index: 9;
+        transition: 0.4s;
+    }
+
+    .mobile-nav-box.is-active {
+        right: 0;
+        opacity: 100;
+    }
+
+    .mobile-nav-link {
+        padding: 2vw 5vw;
+        display: flex;
+        justify-content: start;
+        align-items: center;
     }
 }
 
@@ -408,7 +494,7 @@ nav {
 
 @media only screen and (max-width: 576px) {
     .hero {
-        padding-top: 16.28vw;
+        padding-top: 17.02vw;
     }
     
     .caps {
@@ -418,7 +504,7 @@ nav {
     
     .hero-p{
         width: 70vw;
-        margin-top: 4.09vw;
+        margin-top: 4.1vw;
     }
 }
 
@@ -488,13 +574,13 @@ nav {
 
 @media only screen and (max-width: 576px) {
     .fixed-sm-nav {
-        margin-right: 4vw;
+        margin-right: 6vw;
     }
     
     .sm-link {
-        width: 5.52vw;
-        height: 5.52vw;
-        margin-bottom: 5.52vw;
+        width: 5.62vw;
+        height: 5.62vw;
+        margin-bottom: 5.62vw;
         border-radius: 0.89vw;
     }
     
@@ -505,7 +591,7 @@ nav {
     
     .media-panel-line {
         width: 0.4vw;
-        height: 30vh;
+        height: 8vh;
     }
 }
 
@@ -665,12 +751,12 @@ nav {
     }
 
     .about p {
-        width: 70vw;
+        width: 67vw;
         margin-bottom: 4.29vw;
     }
 
     .tools-list {
-        padding-left: 5.15vw;
+        padding-left: 3.15vw;
         font-size: 3.26vw;
     }
 
@@ -906,7 +992,7 @@ nav {
 
 @media only screen and (max-width: 576px) {
     .portfolio-p {
-        width: 70vw;
+        width: 67vw;
         margin-bottom: 9.37vw;
     }
 
@@ -959,19 +1045,19 @@ nav {
     }
 
     .folder-icon {
-        width: 7.15vw;
-        height: 7.15vw;
+        width: 7.48vw;
+        height: 7.48vw;
     }
     
     .ext-link-icon {
-        width: 4.09vw;
-        height: 4.09vw;
+        width: 4.28vw;
+        height: 4.28vw;
         margin-left: 2.29vw;
     }
     
     .live-site-icon {
-        width: 3.94vw;
-        height: 3.94vw;
+        width: 4.12vw;
+        height: 4.12vw;
         margin-left: 2.29vw;
     }
 
@@ -980,11 +1066,11 @@ nav {
     }
 
     .card-p {
-        font-size: 3.26vw;
+        font-size: 3.41vw;
     }
     
     .card-tool-tag {
-        font-size: 2.46vw;
+        font-size: 2.68vw;
         margin-right: 3.61vw;
     }
 }
@@ -1005,7 +1091,7 @@ footer p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 65vw;
+    width: 70vw;
 }
 
 .footer-info {
@@ -1014,6 +1100,10 @@ footer p {
     font-size: 1.14vw;
     letter-spacing: 0.2em;
     color: #E95D39;
+    width: 44vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .foot-link {
@@ -1036,17 +1126,19 @@ footer p {
 
     .foot-nav {
         margin-top: 11.14vw;
-        width: 80vw;
+        width: 70vw;
     }
 
     .footer-info {
         font-size: 1.48vw;
+        flex-wrap: wrap;
+        width: 35vw;
     }
 }
 
 @media only screen and (max-width: 576px) {
     .footer {
-        padding-bottom: 5vw;
+        padding-bottom: 7vw;
     }
 
     footer p {
@@ -1055,7 +1147,7 @@ footer p {
 
     .foot-nav {
         margin-top: 24.51vw;
-        width: 90vw;
+        width: 60vw;
         flex-direction: column;
         align-items: flex-start;
     }
@@ -1063,5 +1155,9 @@ footer p {
     .footer-info {
         font-size: 3.26vw;
         margin: 7.12vw 0vw 6.12vw;
+    }
+
+    .foot-dash {
+        display: none;
     }
 }
