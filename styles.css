@@ -70,6 +70,30 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 
+/*  --  COLOR VARIABLES  --  */
+
+:root {
+    /* Dark More Pallete */
+    --bg-color: #041737;
+    --main-color: #E95D39;
+    --second-color: #BA4A49;
+    --accent-color: #FFAA2C;
+    --overlay-color: #e95c39c5;
+    --card-top-color: #1E2142;
+    --card-bottom-color: #212444;
+}
+
+.light-mode {
+    /* Light Mode Pallete */
+    --bg-color: #EDDBD6;
+    --main-color: #041737;
+    --second-color: #382A4E;
+    --accent-color: #FF491A;
+    --overlay-color: #382a4eb0;
+    --card-top-color: #F0D1C7;
+    --card-bottom-color: #F3D4C4;
+}
+
 /*  --  GLOBAL & COMPONENTS  --  */
 
 html {
@@ -77,11 +101,12 @@ html {
 }
 
 body {
-    background-color: #041737;
-    color: #BA4A49;
+    background-color: var(--bg-color);
+    color: var(--second-color);
     font-family: 'Open Sans', sans-serif;
     font-size: 1.29vw;
     font-weight: 400;
+    transition: 0.2s;
 }
 
 section {
@@ -116,11 +141,11 @@ h3 {
     font-size: 1.29vw;
     font-weight: 300;
     letter-spacing: 0.25em;
-    color: #FFAA2C;
+    color: var(--accent-color);
     background-color: transparent;
     margin-top: 3.21vw;
     padding: 1.14vw 2.29vw;
-    border: 0.14vw solid #FFAA2C;
+    border: 0.14vw solid var(--accent-color);
     border-radius: 0.7vw;
     cursor: pointer;
     transition: transform 0.3s;
@@ -139,20 +164,20 @@ h3 {
     font-size: 1.25vw;
     font-weight: 300;
     letter-spacing: 0.25em;
-    color: #FFAA2C;
+    color: var(--accent-color);
     text-decoration: none;
     transition: transform 0.3s;
     transition: text-shadow 0.2s;
 }
 
 .function-link:hover {
-    text-shadow: 0vw 0vw 0.3vw #FFAA2C;
+    text-shadow: 0vw 0vw 0.3vw var(--accent-color);
     display: inline-block;
     transform: translateY(-0.15vw);
 }
 
 .orange {
-    color: #E95D39;
+    color: var(--main-color);
 }
 
 .cursive {
@@ -161,7 +186,7 @@ h3 {
 
 .p-link {
     font-weight: 600;
-    color: #E95D39;
+    color: var(--main-color);
     text-decoration: none;
 }
 
@@ -174,7 +199,7 @@ h3 {
     font-family: 'Exo', sans-serif;
     font-size: 1.29vw;
     font-weight: 300;
-    color: #FFAA2C;
+    color: var(--accent-color);
     letter-spacing: 0.25em;
     display: inline-block;
     margin-bottom: 2.14vw;
@@ -207,7 +232,7 @@ h3 {
         font-size: 1.68vw;
         margin-top: 4.17vw;
         padding: 1.48vw 2.98vw;
-        border: 0.18vw solid #FFAA2C;
+        border: 0.18vw solid var(--accent-color);
         border-radius: 0.7vw;
     }
     
@@ -221,7 +246,7 @@ h3 {
     }
     
     .function-link:hover {
-        text-shadow: 0vw 0vw 0.39vw #FFAA2C;
+        text-shadow: 0vw 0vw 0.39vw var(--accent-color);
         transform: translateY(-0.2vw);
     }
 
@@ -260,7 +285,7 @@ h3 {
         font-size: 3.70vw;
         margin-top: 9.17vw;
         padding: 3.26vw 6.57vw;
-        border: 0.40vw solid #FFAA2C;
+        border: 0.40vw solid var(--accent-color);
         border-radius: 1.54vw;
     }
     
@@ -274,7 +299,7 @@ h3 {
     }
     
     .function-link:hover {
-        text-shadow: 0vw 0vw 0.86vw #FFAA2C;
+        text-shadow: 0vw 0vw 0.86vw var(--accent-color);
         transform: translateY(-0.44vw);
     }
 
@@ -315,11 +340,12 @@ nav {
 
 .nav-links-box {
     list-style: none;
+    margin-right: 9vw;
 }
 
 .nav-link {
     display: inline-block;
-    margin-left: 3.93vw;
+    margin-left: 3vw;
 }
 
 .mobile-navigation {
@@ -348,9 +374,13 @@ nav {
     .napo-logo:hover {
         box-shadow: 0vw 0vw 1.56vw #ffab2c79;
     }
+
+    .nav-links-box {
+        margin-right: 11.7vw;
+    }
     
     .nav-link {
-        margin-left: 5.1vw;
+        margin-left: 3.9vw;
     }
 }
 
@@ -403,7 +433,7 @@ nav {
         display: block;
         width: 100%;
         height: 0.7vw;
-        background-color: #E95D39;
+        background-color: var(--main-color);
         margin: 1.1vw 0vw;
         transition: 0.4s;
         border-radius: 1vw;
@@ -547,7 +577,46 @@ nav {
 .media-panel-line {
     width: 0.14vw;
     height: 23vh;
-    background-color: #BA4A49;
+    background-color: var(--second-color);
+}
+
+.theme-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 4.8vw;
+    right: 6.6vw;
+    width: auto;
+    background-color: transparent;
+    border: none;
+    gap: 0.38vw;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+
+.theme-button:hover .sun-icon {
+    filter: drop-shadow(0vw 0vw 0.6vw #ffab2cc7);
+}
+
+.theme-button:hover .moon-icon {
+    filter: drop-shadow(0vw 0vw 0.6vw #75658e88);
+}
+
+.moon-icon {
+    width: 1.32vw;
+}
+
+.sun-icon {
+    width: 1.79vw;
+}
+
+.theme-line {
+    width: 1.07vw;
+    height: 0.14vw;
+    background-color: #382A4E;
 }
 
 @media only screen and (max-width: 992px) {
@@ -569,6 +638,33 @@ nav {
     
     .media-panel-line {
         width: 0.18vw;
+    }
+
+    .theme-button {
+        top: 6.2vw;
+        right: 5.3vw;
+        gap: 0.49vw;
+    }
+
+    .theme-button:hover .sun-icon {
+        filter: drop-shadow(0vw 0vw 0.78vw #ffab2cc7);
+    }
+
+    .theme-button:hover .moon-icon {
+        filter: drop-shadow(0vw 0vw 0.78vw #75658e88);
+    }
+    
+    .moon-icon {
+        width: 1.72vw;
+    }
+    
+    .sun-icon {
+        width: 2.33vw;
+    }
+    
+    .theme-line {
+        width: 1.39vw;
+        height: 0.18vw;
     }
 }
 
@@ -593,6 +689,34 @@ nav {
         width: 0.4vw;
         height: 8vh;
     }
+
+    .theme-button {
+        flex-direction: column;
+        top: 47vw;
+        right: 6vw;
+        gap: 1.13vw;
+    }
+
+    .theme-button:hover .sun-icon {
+        filter: drop-shadow(0vw 0vw 1.79vw #ffab2cc7);
+    }
+
+    .theme-button:hover .moon-icon {
+        filter: drop-shadow(0vw 0vw 1.79vw #75658e88);
+    }
+    
+    .moon-icon {
+        width: 3.93vw;
+    }
+    
+    .sun-icon {
+        width: 5.36vw;
+    }
+    
+    .theme-line {
+        width: 0.42vw;
+        height: 3.20vw;
+    }
 }
 
 
@@ -616,7 +740,7 @@ nav {
     font-size: 1.25vw;
     font-weight: 300;
     letter-spacing: 0.25em;
-    color: #FFAA2C;
+    color: var(--accent-color);
     margin-bottom: 1.8vw;
     display: inline-block;
 }
@@ -633,7 +757,7 @@ nav {
 .tools-list {
     margin-right: 5vw;
     padding-left: 1.8vw;
-    color: #E95D39;
+    color: var(--main-color);
     font-family: 'Exo', sans-serif;
     font-weight: 300;
     letter-spacing: 0.25em;
@@ -643,7 +767,7 @@ nav {
 
 .tools-list li::before {
     content: "\2022";
-    color: #FFAA2C;
+    color: var(--accent-color);
     font-weight: bold;
     display: inline-block;
     width: 1em;
@@ -676,7 +800,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #e95c39c5;
+    background-color: var(--overlay-color);
     border-radius: 1vw;
     opacity: 1;
     transition: opacity .3s ease-out;
@@ -747,7 +871,7 @@ nav {
 
     .function-tag {
         font-size: 3.59vw;
-        margin-bottom: 5.15w;
+        margin-bottom: 5.15vw;
     }
 
     .about p {
@@ -815,7 +939,7 @@ nav {
     font-weight: 300;
     font-size: 0.86vw;
     letter-spacing: 0.25em;
-    color: #FFAA2C;
+    color: var(--accent-color);
     margin-left: 0.5vw;
 }
 
@@ -831,7 +955,7 @@ nav {
     width: 22.14vw;
     height: 24.29vw;
     padding: 2.5vw 2.14vw;
-    background: linear-gradient(#1E2142, #212344);
+    background: linear-gradient(var(--card-top-color), var(--card-bottom-color));
     border-radius: 0.71vw;
     display: flex;
     flex-direction: column;
@@ -853,7 +977,7 @@ nav {
 }
 
 .portfolio-card:hover h3 {
-    color: #E95D39;
+    color: var(--main-color);
 }
 
 .card-top-icons {
@@ -905,7 +1029,7 @@ nav {
     font-weight: 400;
     font-size: 0.86vw;
     letter-spacing: 0.25em;
-    color: #E95D39;
+    color: var(--main-color);
     margin-right: 1.26vw;
 }
 
@@ -1099,7 +1223,7 @@ footer p {
     font-weight: 400;
     font-size: 1.14vw;
     letter-spacing: 0.2em;
-    color: #E95D39;
+    color: var(--main-color);
     width: 44vw;
     display: flex;
     justify-content: space-between;
@@ -1107,7 +1231,7 @@ footer p {
 }
 
 .foot-link {
-    color: #E95D39;
+    color: var(--main-color);
     text-decoration: none;
 }
 
