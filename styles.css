@@ -81,6 +81,7 @@ p, h1, h2, h3, h4, h5, h6 {
     --overlay-color: #e95c39c5;
     --card-top-color: #1E2142;
     --card-bottom-color: #212444;
+    --button-hover-bg: #ffab2c0c;
 }
 
 .light-mode {
@@ -92,6 +93,7 @@ p, h1, h2, h3, h4, h5, h6 {
     --overlay-color: #382a4eb0;
     --card-top-color: #F0D1C7;
     --card-bottom-color: #F3D4C4;
+    --button-hover-bg: #0417370e;
 }
 
 /*  --  GLOBAL & COMPONENTS  --  */
@@ -154,7 +156,7 @@ h3 {
 }
 
 .button:hover {
-    background-color: #ffab2c09;
+    background-color: var(--button-hover-bg);
     text-shadow: 0vw 0vw 0.3vw #ffab2c8a;
     transform: translateY(-0.15vw);
 }

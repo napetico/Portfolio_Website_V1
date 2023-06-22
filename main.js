@@ -35,9 +35,11 @@ const sun = document.querySelector('.sun-icon');
 const line = document.querySelector('.theme-line');
 const mobileNav = document.querySelector('.mobile-nav-box');
 
+// Add the event listener and the dark/light mode settings
 themeButton.addEventListener('click', function () {
     document.body.classList.toggle('light-mode');
     if (document.body.classList.contains('light-mode')) {
+        // These are the light-mode settings
         moon.src = 'media/napetico-moon-icon-light-mode.png';
         sun.src = 'media/napetico-sun-icon-light-mode.png';
         line.style.backgroundColor = '#382a4ec0';
@@ -55,6 +57,7 @@ themeButton.addEventListener('click', function () {
         folder.forEach(n => n.src = 'media/napetico-repository-icon-light.png');
         mobileNav.style.backgroundColor = '#fffefe';
     } else {
+        // These are the dark-mode settings
         moon.src = 'media/napetico-sun-icon-dark-mode.png';
         logoImage.forEach(n => n.src = 'media/napetico-logo.svg');
         github.src = 'media/napetico-github-logo.png';
@@ -75,7 +78,27 @@ themeButton.addEventListener('click', function () {
     }
 })
 
+/* 
+This code was not working as I wanted. 
+I wanted to make the whole card clickable to the ext-link-icon used in the repo-link-icon.
+Also I wanted to be able to click on the live-site-icon inside the card.
+The following code made the card clickable to the repo-link (as intended),
+but macde it impossible for me to click on the ext-link-icon icon to open the site-link.
 
 // THIS MAKES THE CARDS CLICKABLE
-const card = document.querySelectorAll('.portfolio-card')
-const mainLink = document.querySelectorAll('github')
+const card = document.querySelectorAll('.portfolio-card');
+const mainLink = document.querySelectorAll('.repo-link');
+
+// Set each card to redirect to the repo-link inside each
+card.forEach((n, i) => n.addEventListener('click', function () {
+    mainLink.forEach((m, j) => {
+        const isTextSelected = window.getSelection().toString();
+        if (!isTextSelected) {
+            if (i === j) {
+            mainLink[j].click();
+            }
+        }
+        
+    });
+}));
+*/
