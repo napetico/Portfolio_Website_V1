@@ -71,5 +71,5 @@ Please, feel free to comment or add up to this site:
 
 ## Feedback & Contact:
 Thanks for taking a look at this code. Feedback is very welcome!
-Find me in any of the channels listed in this site.
+Find me in any of the channels listed in [this site](https://napetico.github.io/portfolio-website-v1/) I just built.
 
